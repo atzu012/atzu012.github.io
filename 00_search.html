@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .clear:before, .clear:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        input:focus,
+        button:focus,
+        a:focus {
+        outline: none;
+        }
+
+        a, button {
+            transition: all 0.2s ease-in-out;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:disabled {
+            cursor: default;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Microsoft JhengHei', 'Heiti TC', 'WenQuanYi Zen Hei', sans-serif;
+            font-size: 100%;
+            color: #454545;
+            margin: 0;
+            background-color: #1f2487;
+        }
+
+        .wrapper section {
+            padding: 1em;
+            text-align: center;
+        }
+
+        .wrapper .main {
+            background-color: #fff;
+            padding-bottom: 2em;
+        }
+
+        .wrapper .main > h1 span {
+            color: #1e28eb;
+        }
+
+        .wrapper .countdownTable {
+            table-layout: fixed;
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid #d4d5e7;
+            border-right-width: 0;
+            border-left-width: 0;
+            margin-bottom: 2rem;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+
+        .wrapper .countdownTable tr:first-child {
+            color: #1e28eb;
+            font-size: 1.5em;
+        }
+
+        .wrapper .countdownTable tr:first-child td {
+            padding-top: .5rem;
+        }
+
+        .wrapper .countdownTable tr:last-child {
+            font-size: .9em;
+        }
+
+        .wrapper .countdownTable tr:last-child td {
+            padding-bottom: .5rem;
+        }
+
+        .wrapper .sing_number {
+            font-size: 1.2em;
+        }
+
+        .wrapper .sing_number span {
+            display: inline-block;
+            color: #00ce88;
+            font-family: 'Roboto';
+            font-size: 2em;
+        }
+
+        .wrapper .search_form .input_txt {
+            border: 1px solid #1e28eb;
+            border-top-width: 0;
+            border-right-width: 0;
+            border-left-width: 0;
+            padding: .2em .5em;
+            margin: 2rem auto;
+            transition: all 0.2s ease-in-out;
+            font-weight: 700;
+            max-width: 800px;
+            display: block;
+            text-align: center;
+        }
+
+        .wrapper .search_form .input_txt + button {
+            border: 1px solid #1e28eb;
+            border-radius: 5em;
+            background-color: #fff;
+            padding: .2em .5em;
+            max-width: 200px;
+        }
+
+        .wrapper .search_form .input_txt + button:hover {
+            background-color: #1f2487;
+            color: #fff;
+        }
+
+        .wrapper .search_form .input_txt,
+        .wrapper .search_form .input_txt + button {
+            font-family: 'Roboto', 'Microsoft JhengHei', 'Heiti TC', 'WenQuanYi Zen Hei', sans-serif;
+            font-size: 1em;
+            color: #1e28eb;
+            width: 100%;
+        }
+
+        .wrapper .search_form .input_txt:focus {
+            border-bottom-width: 3px;
+            font-size: 1.4em;
+        }
+
+        .wrapper .main + section {
+            color: #fff;
+            position: relative;
+            padding-top: 2em;
+        }
+
+        .wrapper .main + section::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 20px 0 20px;
+            border-color: #fff transparent transparent transparent;
+            top: 0;
+            left: 50%;
+            margin-left: -20px;
+        }
+
+        .wrapper .main + section .msg {
+            color: #00e698;
+            font-size: 1.1em;
+        }
+
+        .wrapper .main + section p {
+            color: #00ce88;
+            font-size: .9em;
+        }
+
+        .wrapper .main + section p span {
+            display: inline-block;
+            color: #fff;
+            font-size: 1.3em;
+        }
+
+        /* .spinner by Tobias Ahlin - http://tobiasahlin.com/spinkit/ */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+
+            margin: 100px auto;
+            -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+            animation: sk-rotateplane 1.2s infinite ease-in-out;
+        }
+
+        @-webkit-keyframes sk-rotateplane {
+            0% { -webkit-transform: perspective(120px) }
+            50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+            100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+        }
+
+        @keyframes sk-rotateplane {
+            0% { 
+                transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+                -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+            } 50% { 
+                transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+                -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+            } 100% { 
+                transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+                -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .wrapper .main > h1 {
+                font-size: 2.5em;
+            }
+
+            .wrapper .countdownTable,
+            .wrapper .sing_number,
+            .wrapper .main + section .msg {
+                font-size: 1.5em;
+            }
+
+            .wrapper .search_form {
+                font-size: 1.2em;
+            }
+
+            .wrapper .search_form .input_txt:focus {
+                font-size: 2em;
+            }
+            
+            .wrapper .main + section p {
+                font-size: 1em;
+            }
+
+            .wrapper .main + section p span {
+                font-size: 1.7em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="app" class="wrapper">
+
+    <section class="main">
+        <h1><span>The F2E</span> - 前端修練精神時光屋</h1>
+        
+        <p>距離開賽還有</p>
+
+        <table class="countdownTable">
+            <tbody>
+                <tr>
+                    <td>{{countDown.day}}</td>
+                    <td>{{countDown.hour}}</td>
+                    <td>{{countDown.min}}</td>
+                    <td>{{countDown.sec}}</td>
+                </tr>
+                <tr>
+                    <td>天</td>
+                    <td>時</td>
+                    <td>分</td>
+                    <td>秒</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p v-if="singNum.success" class="sing_number">目前已有 <span>{{singNum.total}}</span> 人參加!</p>
+        
+        <p>你已經報名了嗎? 快來查察</p>
+    
+        <form @submit.prevent="submit" class="search_form">
+            <input type="email" placeholder="e-mail" v-model="mail" @keyup.13="submit()" class="input_txt" ref="search">
+            <button type="submit">查 尋</button>
+        </form>
+    </section>
+
+    <section>
+        <div class="animated" v-bind:class="{fadeInUp: isActive}">
+            <p class="msg">{{result.message}}</p>
+            
+            <div v-if="result.success">
+                <p>暱稱 / <span>{{result.nickName}}</span></p>
+                <p>報名mail / <span>{{result.mail}}</span></p>
+                <p>報名時間 / <span>{{time}}</span></p>
+            </div>
+        </div>
+
+        <div v-show="loading" class="spinner"></div>
+    </section>
+</div>
+<script>
+    const API = 'https://www.thef2e.com/api/isSignUp';
+    const API2 = 'https://www.thef2e.com/api/signUpTotal';
+
+    new Vue({
+        el: "#app",
+        data: {
+            mail: '',
+            loading: false,
+            result: {},
+            singNum: {},
+            countDown: {
+                day: "0",
+                hour: "0",
+                min: "0",
+                sec: "0"
+            },
+            isActive: false
+        },
+        methods: {
+            submit(){
+                this.loading = true;
+                this.isActive = false;
+                this.result = {};
+
+                window.scrollTo(0,document.body.scrollHeight);
+
+                axios.post(API, {
+                    email: this.mail,
+                }).then( response => {
+                    this.loading = false;
+                    this.isActive = true;
+
+                    this.result = response.data;
+                    this.result.mail = this.mail;
+                });
+            }
+        },
+        computed: {
+            time(){
+                const date = new Date( this.result.timeStamp );
+                const timeTxt = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                return timeTxt;
+            }
+        },
+        mounted() {
+            
+            axios.get(API2).then( res => this.singNum = res.data );
+
+            this.$refs.search.focus();
+
+            // countDown
+            let targetDay = new Date("2018/6/4 12:00:00").getTime();
+
+            function addZero(num){
+                if( num < 10 ) {
+                    return "0" + String(num);
+                }else{
+                    return String(num);
+                }
+            }
+
+            var x = setInterval( () => {
+                let now  = new Date().getTime();
+                let distance = targetDay - now;
+
+                this.countDown.day = addZero( Math.floor(distance / (1000 * 60 * 60 * 24)) );
+                this.countDown.hour = addZero( Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) );
+                this.countDown.min = addZero( Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) );
+                this.countDown.sec = addZero( Math.floor((distance % (1000 * 60)) / 1000) );
+
+                if (distance < 0) {
+                    clearInterval(x);
+                }
+
+            }, 1000);
+        }
+    })
+</script>
+
+</body>
+</html>
