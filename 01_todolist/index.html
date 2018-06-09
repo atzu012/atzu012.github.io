@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="app">
+    <div class="header">
+        <div>
+            <a class="active" href="#">My Tasks</a>
+            <a href="#">In Progress</a>
+            <a href="#">Completed</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <section>
+            <div class="title_wrapper">
+                <h1>T<span>o</span>d<span>o</span></h1>
+                
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+
+            <input class="addtodo" type="text" placeholder="Task Name" v-model="input" @keyup.enter="sendList">
+            <button type="button" @click="sendList"><i class="fas fa-plus"></i> Add</button>
+        </section>
+
+        <section class="todolist_wrapper">
+            <div class="todolist">
+                <div class="top">
+                    <div class="input">
+                        <span class="check"></span>
+                        <label class="viewTxt">Type Something Here...</label>
+                        <input type="text" value="Type Something Here..." class="inputTxt" style="display: none;">
+                    </div>
+
+                    <div class="iconlist">
+                        <button type="button" class="starbtn"><i class="far fa-star"></i></button>
+                        <button type="button"><i class="fas fa-pencil-alt"></i></button>
+                        <button type="button"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                    <div class="clear"></div>
+
+                    <ul class="msgbar">
+                        <li><i class="far fa-calendar-alt"></i> 5/4</li>
+                        <li><i class="far fa-file"></i></li>
+                        <li><i class="far fa-comment-dots"></i></li>
+                    </ul>
+                </div>
+
+                <div class="editwp">
+                    <label><i class="far fa-calendar-alt"></i> Deadline</label>
+                    <div class="timewp">
+                        <input type="text" placeholder="yyyy/mm/dd">
+                        <input type="text" placeholder="hh:mm">
+                    </div>
+
+                    <label><i class="far fa-file"></i> File</label>
+                    <div>
+                        <div class="uploadedlist">
+                            <ul>
+                                <li><a href="#">20180514.zip</a>
+                                    <button type="button"><i class="fas fa-trash-alt"></i></button></li>
+                                <li>upload yesterday</li>
+                            </ul>
+                        </div>
+                        <label class="uploadbtn">
+                            <input type="file"/>
+                            <span><i class="fas fa-plus"></i></span>
+                        </label>
+                    </div>
+                    
+                    <label><i class="far fa-comment-dots"></i> Comment</label>
+                    <textarea rows="5" placeholder="Type your memo here..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <p>4 tasks left</p>
+        </section>
+    </div>    
+
+    <button class="submitbtn" type="submit" disabled>Save</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+<script src="js/todolist.js"></script>
+</body>
+</html>
