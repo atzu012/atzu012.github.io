@@ -58,7 +58,6 @@
                         <li><i class="far fa-comment-dots"></i></li>
                     </ul>
                 </div>
-
                 <div class="editwp">
                     <label><i class="far fa-calendar-alt"></i> Deadline</label>
                     <div class="timewp">
@@ -86,7 +85,6 @@
                 </div>
             </div>
 
-            
             <div class="todolist star">
                 <div class="top">
                     <div class="input">
@@ -108,7 +106,54 @@
                         <li><i class="far fa-comment-dots"></i></li>
                     </ul>
                 </div>
+                <div class="editwp" style="display: none;">
+                    <label><i class="far fa-calendar-alt"></i> Deadline</label>
+                    <div class="timewp">
+                        <input type="text" placeholder="yyyy/mm/dd">
+                        <input type="text" placeholder="hh:mm">
+                    </div>
 
+                    <label><i class="far fa-file"></i> File</label>
+                    <div>
+                        <div class="uploadedlist">
+                            <ul>
+                                <li><a href="#">20180514.zip</a>
+                                    <button type="button"><i class="fas fa-trash-alt"></i></button></li>
+                                <li>upload yesterday</li>
+                            </ul>
+                        </div>
+                        <label class="uploadbtn">
+                            <input type="file"/>
+                            <span><i class="fas fa-plus"></i></span>
+                        </label>
+                    </div>
+                    
+                    <label><i class="far fa-comment-dots"></i> Comment</label>
+                    <textarea rows="5" placeholder="Type your memo here..."></textarea>
+                </div>
+            </div>
+
+            <div class="todolist done">
+                <div class="top">
+                    <div class="input">
+                        <span class="check"></span>
+                        <label class="viewTxt">Type Something Here...</label>
+                        <input type="text" value="Type Something Here..." class="inputTxt" style="display: none;">
+                    </div>
+
+                    <div class="iconlist">
+                        <button type="button" class="starbtn"><i class="far fa-star"></i></button>
+                        <button type="button"><i class="fas fa-pencil-alt"></i></button>
+                        <button type="button"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                    <div class="clear"></div>
+
+                    <ul class="msgbar">
+                        <li><i class="far fa-calendar-alt"></i> 5/4</li>
+                        <li><i class="far fa-file"></i></li>
+                        <li><i class="far fa-comment-dots"></i></li>
+                    </ul>
+                </div>
                 <div class="editwp" style="display: none;">
                     <label><i class="far fa-calendar-alt"></i> Deadline</label>
                     <div class="timewp">
@@ -137,7 +182,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="footer_info">
             <p>4 tasks left</p>
         </section>
     </div>    

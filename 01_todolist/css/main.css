@@ -187,7 +187,7 @@ button:disabled {
     display: inline-block;
     cursor: pointer;
 }
-.main .todolist .top .input .check.active:after {
+.main .todolist.done .top .input .check:after {
     background: #00408B url(../images/check.svg) center center no-repeat;
     background-size: 80%;
 }
@@ -324,6 +324,10 @@ button:disabled {
 }
 .main .todolist .editwp .uploadbtn input[type=file] + span:hover {
     background-color: #00408B;
+}
+
+.main .footer_info {
+    margin-bottom: 3em;
 }
 
 
