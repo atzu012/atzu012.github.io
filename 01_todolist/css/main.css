@@ -129,6 +129,7 @@ button:disabled {
 .main .todolist {
     background-color: #fff;
     position: relative;
+    margin-bottom: 1em;
 }
 .main .todolist:before {
     content: "";
