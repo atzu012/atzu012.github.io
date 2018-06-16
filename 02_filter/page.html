@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter</title>
+
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+</head>
+<body>
+
+<div id="app" class="wrapper">
+
+    <span></span>
+    <span></span>
+    <section class="header page">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.svg" alt="HaveFun"></a>
+            <button type="button" v-show="showBtn" @click="show = ! show"><i class="fas fa-search"></i></button>
+        </div>
+    </section>
+
+    <section class="search page" v-show="show">
+        <div>
+            <label><i class="fas fa-search"></i></label>
+            <input type="text" placeholder="Explore your own activities">
+        </div>
+    </section>
+
+    <section class="list page" v-show="show">
+        <div>
+            <h5>Location <span class="icon"></span></h5>
+            <div>
+                <select>
+                    <option value="Taiwan">Taiwan</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <h5>Date <span class="icon"></span></h5>
+            <div class="time">
+                <label>from</label>
+                <input type="text" value="2018/5/24">
+                <label>to</label>
+                <input type="text" value="2018/6/1">
+            </div>
+        </div>
+
+        <div>
+            <h5>Categories <span class="icon"></span></h5>
+            <div>
+                <div class="form">
+                    <input type="checkbox" id="check00">
+                    <label for="check00">All</label>
+                </div>
+                <div class="form">
+                    <input type="checkbox" id="check01">
+                    <label for="check01">Entertainment</label>
+                </div>
+                <div class="form">
+                    <input type="checkbox" id="check02">
+                    <label for="check02">Food</label>
+                </div>
+                <div class="form">
+                    <input type="checkbox" id="check03">
+                    <label for="check03">Learning</label>
+                </div>
+                <div class="form">
+                    <input type="checkbox" id="check04">
+                    <label for="check04">Outdoors</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main page">
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="#" class="router-link-active">Explore</a></li>
+                <li><a href="#" class="router-link-exact-active router-link-active">Kogi Cosby sweater ethical.</a></li>
+            </ul>
+        </nav>
+
+        <div class="article">
+            <div class="pic" style="background-image: url(https://http.cat/100)"></div>
+            <div class="wp">
+                <h1>Kogi Cosby sweater ethical.</h1>
+                <span class="adr">Herman Cobb</span>
+                <span class="tp">Entertainment</span>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Kaohsiung City</li>
+                    <li><i class="far fa-calendar-alt"></i> 2018/5/24 - 2018/5/31</li>
+                </ul>
+                <p class="txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                 
+                <p class="txt">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    const API = 'https://www.thef2e.com/api/isSignUp';
+    const API2 = 'https://www.thef2e.com/api/signUpTotal';
+
+    new Vue({
+        el: "#app",
+        data: {
+            show: false,
+            showBtn: false
+        },
+        methods: {
+            resizeWindow (event) {
+                this.setNavClick();
+            },
+            listsClick( event ) {
+                let className = "active";
+                let par = event.target.parentNode;
+
+                if (par.classList) {
+                    par.classList.toggle(className);
+                } else {
+                    let classes = par.className.split(' ');
+                    let existingIndex = classes.indexOf(className);
+
+                    if (existingIndex >= 0)
+                        classes.splice(existingIndex, 1);
+                    else
+                        classes.push(className);
+
+                    par.className = classes.join(' ');
+                }
+            },
+            setNavClick(){
+                let lists = document.querySelectorAll('.list h5');
+
+                if( document.body.offsetWidth >= 768 ){
+                    this.showBtn = false;
+                    this.show = true;
+
+                    lists.forEach(function(element){
+                        element.removeEventListener("click", this.listsClick, false);
+                    });
+                }else{
+                    this.showBtn = true;
+                    lists.forEach(function(element){
+                        element.addEventListener("click", this.listsClick, false);
+                    });
+                }
+            }
+        },
+        mounted() {
+
+            this.setNavClick();  
+
+            window.addEventListener('resize', this.setNavClick, false);  
+
+        }
+    })
+</script>
+
+</body>
+</html>
