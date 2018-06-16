@@ -7,9 +7,10 @@
 練習vue與撈api
 
 [01 todolist](https://atzu012.github.io/01_todolist/index.html)
-練習html與css - 最近在忙別的事情所以js練習就暫緩了
+練習html與css
 
-
+[02 filter](https://atzu012.github.io/02_filter/index.html)
+練習html、css與接一咪咪api
 
 
 素材來源
