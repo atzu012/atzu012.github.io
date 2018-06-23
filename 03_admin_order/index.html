@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Order</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Shoptime</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">Orders</a>
+                <a class="nav-item nav-link" href="#">Product</a>
+                </div>
+                <a class="nav-item nav-link ml-auto setad" href="#">Admin</a>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="overview_wp">
+        <div class="container">
+            <div class="titwp">
+                <h3 class="tit_01">Overview</h3>
+                <div class="wgray">
+                    <span>2018/6/6 <i class="fas fa-caret-right"></i> 2018/6/13</span>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Weekly</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Dally</a>
+                            <a class="dropdown-item" href="#">Weekly</a>
+                            <a class="dropdown-item" href="#">Monthly</a>
+                            <a class="dropdown-item" href="#">Yearly</a>
+                            <a class="dropdown-item" href="#">Custom</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4">
+                    <div class="over_num">
+                        <h5><i class="fas fa-hand-holding-usd"></i> <span>Total Revenue</span></h5>
+                        <p>54,540</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="over_num">
+                        <h5><i class="fas fa-boxes"></i> <span>Total Cost</span></h5>
+                        <p class="red">12,660</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="over_num">
+                        <h5><i class="fas fa-money-bill"></i> <span>Net Income</span></h5>
+                        <p class="blue">41,880</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mainbox_01">
+                        <h4>Activity</h4>
+                        <div id="chartdiv_001"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mainbox_01">
+                        <h4>Transaction Website</h4>
+                        <div class="dashboard_info_001">
+                            <ul>
+                                <li><span class="mi"><i class="fab fa-facebook"></i></span><span class="gray">facebook.com</span></li>
+                                <li><span class="t-lg">45,836</span><span class="cs_green" data-toggle="tooltip" data-num="899" data-lastweek="44,937"><i class="fas fa-arrow-up"></i> 20%</span></li>
+                            </ul>
+                            <ul>
+                                <li><span class="mi"><i class="fab fa-google"></i></span><span class="gray">google.com</span></li>
+                                <li><span class="t-lg">23,582</span><span class="cs_green" data-toggle="tooltip" data-num="123" data-lastweek="44,937"><i class="fas fa-arrow-up"></i> 12%</span></li>
+                            </ul>
+                            <ul>
+                                <li><span class="mi"><i class="fab fa-amazon"></i></span><span class="gray">amazon.com</span></li>
+                                <li><span class="t-lg">2,489</span><span class="cs_red" data-toggle="tooltip" data-num="-123" data-lastweek="44,937"><i class="fas fa-arrow-down"></i> 15%</span></li>
+                            </ul>
+                            <ul>
+                                <li><span class="mi"><i class="fab fa-wordpress"></i></span><span class="gray">wordpress.com</span></li>
+                                <li><span class="t-lg">1,057</span><span class="cs_red" data-toggle="tooltip" data-num="-567" data-lastweek="44,937"><i class="fas fa-arrow-down"></i> 30%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mainbox_01">
+                        <h4>Latest Orders</h4>
+                        <div class="orderbox">
+                            <img src="https://picsum.photos/100/100">
+                            <div>
+                                <h5>Vintage T-shirt</h5>
+                                <ul>
+                                    <li><span><i class="fas fa-clock"></i></span> 2018/6/13 13:42</li>
+                                    <li><span><i class="fas fa-male"></i></span> Belle Willis</li>
+                                </ul>
+                            </div>
+                            <p>Total <span>3,200</span></p>
+                        </div>
+                        <div class="orderbox">
+                            <img src="https://picsum.photos/100/100">
+                            <div>
+                                <h5>Cowboy Jacket</h5>
+                                <ul>
+                                    <li><span><i class="fas fa-clock"></i></span> 2018/6/13 10:45</li>
+                                    <li><span><i class="fas fa-male"></i></span> Adrian Cummings</li>
+                                </ul>
+                            </div>
+                            <p>Total <span>2,800</span></p>
+                        </div>
+                        <div class="orderbox">
+                            <img src="https://picsum.photos/100/100">
+                            <div>
+                                <h5>Coach Coat</h5>
+                                <ul>
+                                    <li><span><i class="fas fa-clock"></i></span> 2018/6/13 8:26</li>
+                                    <li><span><i class="fas fa-male"></i></span> Lura Holland</li>
+                                </ul>
+                            </div>
+                            <p>Total <span>1,600</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</main>
+
+
+
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<!-- amcharts - https://www.amcharts.com/demos/date-based-data/ -->
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+<script>
+var chart = AmCharts.makeChart("chartdiv_001", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight": 40,
+    "marginLeft": 40,
+    "autoMarginOffset": 20,
+    "mouseWheelZoomEnabled":true,
+    "dataDateFormat": "YYYY-MM-DD",
+    "valueAxes": [{
+        "axisAlpha": 0,
+        "position": "left"
+    }],
+    "balloon": {
+        "borderThickness": 1,
+        "shadowAlpha": 0
+    },
+    "graphs": [{
+        "id": "g1",
+        "balloon":{
+          "adjustBorderColor":false,
+          "color":"#ffffff"
+        },
+        "bullet": "round",
+        "bulletBorderAlpha": 1,
+        "bulletColor": "#FFFFFF",
+        "bulletSize": 5,
+        "hideBulletsCount": 50,
+        "lineThickness": 2,
+        "lineColor": "#7ED321",
+        "useLineColorForBulletBorder": true,
+        "valueField": "value",
+        "balloonText": "<span style='font-size:18px;'><i class='fas fa-hand-holding-usd'></i> [[value]]</span>"
+    },{
+        "id": "g2",
+        "balloon":{
+          "adjustBorderColor":false,
+          "color":"#ffffff"
+        },
+        "bullet": "round",
+        "bulletBorderAlpha": 1,
+        "bulletColor": "#FFFFFF",
+        "bulletSize": 5,
+        "hideBulletsCount": 50,
+        "lineThickness": 2,
+        "lineColor": "#4A90E2",
+        "useLineColorForBulletBorder": true,
+        "valueField": "value2",
+        "balloonText": "<span style='font-size:18px;'><i class='fas fa-boxes'></i> [[value2]]</span>"
+    },{
+        "id": "g3",
+        "balloon":{
+          "adjustBorderColor":false,
+          "color":"#ffffff"
+        },
+        "bullet": "round",
+        "bulletBorderAlpha": 1,
+        "bulletColor": "#FFFFFF",
+        "bulletSize": 5,
+        "hideBulletsCount": 50,
+        "lineThickness": 2,
+        "lineColor": "#D0021B",
+        "useLineColorForBulletBorder": true,
+        "valueField": "value3",
+        "balloonText": "<span style='font-size:18px;'><i class='fas fa-money-bill'></i> [[value3]]</span>"
+    }],
+    "categoryField": "date",
+    "categoryAxis": {
+        "parseDates": true,
+        "axisAlpha": 0,
+        "gridAlpha": 0,
+        "tickLength": 0
+    },
+    "chartCursor": {
+        "valueLineEnabled": false,
+        "oneBalloonOnly": true,
+        "categoryBalloonEnabled": false,
+        "cursorAlpha":0
+    },
+    "dataProvider": [{
+        "date": "2018-06-06",
+        "value": 7100,
+        "value2": 6100,
+        "value3": 500
+    }, {
+        "date": "2018-06-07",
+        "value": 7000,
+        "value2": 5400,
+        "value3": 500
+    }, {
+        "date": "2018-06-08",
+        "value": 6500,
+        "value2": 2000,
+        "value3": 2600
+    }, {
+        "date": "2018-06-09",
+        "value": 7200,
+        "value2": 4000,
+        "value3": 3000
+    }, {
+        "date": "2018-06-10",
+        "value": 5800,
+        "value2": 3800,
+        "value3": 2200
+    }, {
+        "date": "2018-06-11",
+        "value": 6200,
+        "value2": 5500,
+        "value3": 600
+    }, {
+        "date": "2018-06-12",
+        "value": 6500,
+        "value2": 6500,
+        "value3": 900
+    }, {
+        "date": "2018-06-13",
+        "value": 7300,
+        "value2": 4900,
+        "value3": 1900
+    }]
+});
+
+// jquery
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip({
+        html: true,
+        template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner custom_001"></div></div>',
+        title: function(){
+            let num = parseInt( $(this).data('num') );
+
+            if(num >= 0){
+                txt = '<p>Increase <span class="cs_green">' + num + '</span> views </p>';
+            }else{
+                txt = '<p>Decrease <span class="cs_red">' + Math.abs(num) + '</span> views </p>';
+            }
+
+            txt += '<p>last week: '+ $(this).data('lastweek') +'</p>'
+            return txt;
+        }
+    });
+});
+</script>
+</body>
+</html>
