@@ -15,6 +15,9 @@
 [03 admin order](https://atzu012.github.io/03_admin_order/index.html)
 練習html、css與Bootstrap
 
+[04 product gallery](https://atzu012.github.io/04_product_gallery/index.html)
+練習html、css grid
+
 素材來源
 1. [Font Awesome](https://fontawesome.com/)
 2. [spinner by Tobias Ahlin](http://tobiasahlin.com/spinkit/)
