@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comic Viewer</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+
+<header><a href="index.html">Comicomic</a></header>
+<main class="page_wp">
+    <div class="ad_block"><a href="#"><img src="images/ad-1.png"></a></div>
+
+    <div class="top_ctrl_wp clear">
+        <label class="arrow_tit">My Hexschool</label>
+        <div class="light_btn_group">
+            <button type="button" class="active">
+                <i class="fas fa-sun"></i>
+                <span></span>
+            </button>
+            <button type="button">
+                <span class="left"></span>
+                <i class="far fa-moon"></i>
+            </button>
+        </div>
+        <div class="arrow_select">
+            <select>
+                <option>Chapter 1</option>
+                <option>Chapter 2</option>
+            </select>
+            <select>
+                <option>Page 1</option>
+                <option>Page 2</option>
+                <option>Page 3</option>
+                <option>Page 4</option>
+                <option>Page 5</option>
+                <option>Page 6</option>
+                <option>Page 7</option>
+                <option>Page 8</option>
+                <option>Page 9</option>
+                <option>Page 10</option>
+                <option>Page 11</option>
+                <option>Page 12</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="ad_block"><a href="#"><img src="images/ad-2.png"></a></div>
+
+    <div class="comic">
+        <button type="button" class="prev"><i class="fas fa-chevron-left"></i></button>
+        
+        <a id="now_page" href="#"><img src="images/storyboard-1.png"></a>
+
+        <button type="button" class="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div class="bottom_ctrl_wp">
+        <div class="owl-carousel owl-theme page_item_wp">
+            <div class="page_item active">
+                <span>01</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-1.png"></a>
+            </div>
+            <div class="page_item">
+                <span>02</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-2.png"></a>
+            </div>
+            <div class="page_item">
+                <span>03</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-3.png"></a>
+            </div>
+            <div class="page_item">
+                <span>04</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-4.png"></a>
+            </div>
+            <div class="page_item">
+                <span>05</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-5.png"></a>
+            </div>
+            <div class="page_item">
+                <span>06</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-6.png"></a>
+            </div>
+            <div class="page_item">
+                <span>07</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-7.png"></a>
+            </div>
+            <div class="page_item">
+                <span>08</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-8.png"></a>
+            </div>
+            <div class="page_item">
+                <span>09</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-9.png"></a>
+            </div>
+            <div class="page_item">
+                <span>10</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-10.png"></a>
+            </div>
+            <div class="page_item">
+                <span>11</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-11.png"></a>
+            </div>
+            <div class="page_item">
+                <span>12</span>
+                <a href="#"><img class="owl-lazy" data-src="images/storyboard-12.png"></a>
+            </div>
+        </div>
+
+        <div class="scroller">
+            <button type="button" ><i class="fas fa-angle-left"></i></button>
+            <div class="bar_wp"><span class="bar"></span></div>
+            <button type="button"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <div class="ad_block"><a href="#"><img src="images/ad-3.png"></a></div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+$(function() {
+
+    var owl = $('.owl-carousel');
+
+    owl.owlCarousel({
+        stagePadding: 60,
+        items:5,
+        lazyLoad:true,
+        nav:true,
+        dots:false,
+        margin:10,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },            
+            960:{
+                items:5
+            },
+            1200:{
+                items:5
+            }
+        },
+        navText: ['<i class="fas fa-angle-double-left"></i>', '<i class="fas fa-angle-double-right"></i>']
+    });
+
+    owl.on('mousewheel', '.owl-stage', function (e) {
+        
+        if (e.deltaY>0) {
+            owl.trigger('next.owl');
+        } else {
+            owl.trigger('prev.owl');
+        }
+
+        e.preventDefault();
+    });
+
+    let page_num = 0;
+    let total_page =  $('.page_item_wp .page_item').length;
+    $('#now_page, .comic .next').click(function(evt){
+
+        page_num ++;
+        if( page_num >= total_page ){
+            page_num = total_page;
+        }
+        setPage( page_num, 'next' );
+
+        evt.preventDefault();
+        
+    });
+
+    $('.comic .prev').click(function(evt){
+
+        page_num --;
+        if( page_num <= 0 ){
+            page_num = 0;
+        }
+        setPage( page_num, 'prev' );
+
+        evt.preventDefault();
+        
+    });
+
+    function setPage( num, direction ){
+        
+        let list = $('.page_item_wp .page_item');
+        let next = list.eq( num );
+
+        if( next[0] != undefined ){
+            list.removeClass('active');
+            next.addClass('active');
+
+            const src = next.find('img').data("src");
+            $("#now_page").html('<img src="'+ src +'">');
+
+            if( direction == 'next' ){
+                owl.trigger('next.owl', [300]);
+            }else{
+                owl.trigger('prev.owl');
+            }
+        }
+    }
+
+    $('.page_item_wp').on('click', '.page_item a', function(evt){
+
+        evt.preventDefault();
+
+        $('.page_item_wp .page_item').removeClass('active');
+        $(this).closest('.page_item').addClass('active');
+
+        const src = $(this).find('img').data("src");
+
+        $("#now_page").html('<img src="'+ src +'">');
+
+        page_num = $(this).closest(".owl-item").index();
+
+        console.log('page_num:' + page_num);
+    });
+
+
+    $(".light_btn_group button").click(function(){
+
+        $(".light_btn_group button").removeClass("active");
+
+        $(this).addClass("active");
+
+        if( $(this).index() == 1 ){
+            $('body').addClass('green');
+        }else{
+            $('body').removeClass('green');
+        }
+    });
+
+});
+</script>
+</body>
+</html>
