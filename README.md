@@ -18,6 +18,9 @@
 [04 product gallery](https://atzu012.github.io/04_product_gallery/index.html)
 練習html、css grid
 
+[05_comic_viewer](https://atzu012.github.io/05_comic_viewer/index.html)
+練習html、css flex、jQuery
+
 素材來源
 1. [Font Awesome](https://fontawesome.com/)
 2. [spinner by Tobias Ahlin](http://tobiasahlin.com/spinkit/)
