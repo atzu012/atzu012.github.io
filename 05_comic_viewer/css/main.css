@@ -203,6 +203,7 @@ page_reading.html
     padding: .2rem .5rem;
     width: 50%;
     font-weight: bold;
+    border-radius: 0;
 }
 .page_wp .top_ctrl_wp .arrow_select select + select {
     border-left-width: 0;
