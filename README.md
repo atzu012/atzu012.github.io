@@ -21,6 +21,10 @@
 [05_comic_viewer](https://atzu012.github.io/05_comic_viewer/index.html)
 練習html、css flex、jQuery
 
+[06_validation](https://atzu012.github.io/06_validation/index.html)
+練習html、Bootstrap
+
+
 素材來源
 1. [Font Awesome](https://fontawesome.com/)
 2. [spinner by Tobias Ahlin](http://tobiasahlin.com/spinkit/)
