@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validation</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+
+            <div class="step_line">
+                <div class="line">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <h1 class="title">Create Account</h1>
+            <p>Glad to see you here!</p>
+
+            <form class="jsForm">
+                
+                <!-- Step 1 -->
+                <div id="step1" class="form-row">
+                    <div class="form-group col-md-12">
+                        <label>Account</label>
+                        <input type="email" class="form-control" placeholder="example@email.com" 
+                        data-toggle="tooltip" data-placement="right" title="NVALID EMAIL">
+                        <span></span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password"
+                        data-toggle="tooltip" data-placement="right" title="MINIMUM 8 CHARACTERS">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Comfirm Password</label>
+                        <input type="password" class="form-control" placeholder="Password"
+                        data-toggle="tooltip" data-placement="right" title="NOT MATCH">
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="step2" class="form-row" style="display: none;">
+                    <div class="form-group col-md-6">
+                        <label>Name <small>(optional)</small></label>
+                        <input type="text" class="form-control" placeholder="your name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Phone*</label>
+                        <input type="text" class="form-control" placeholder="your phone"
+                        data-toggle="tooltip" data-placement="right" title="NUMBERS ONLY">
+                    </div>
+                    <div class="form-group col-md-12 mb-0">
+                        <label>Birth Date <small>(optional)</small></label>
+                    </div>
+                    <div class="form-group col-4">
+                        <select class="form-control">
+                            <option>1990</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-4">
+                        <select class="form-control">
+                            <option>12</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-4">
+                        <select class="form-control">
+                            <option>31</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12 mb-0">
+                        <label>Address</label>
+                    </div>
+                    <div class="form-group col-6">
+                        <select class="form-control">
+                            <option>Koahsiung City</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-6">
+                        <select class="form-control">
+                            <option>Yancheng Dist</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" placeholder="detail address"
+                        data-toggle="tooltip" data-placement="right" title="REQUIRED FILED">
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div id="step3" style="display: none;">
+                    <div class="upload_area active">
+                        <i class="fas fa-images"></i>
+                        <p><span>UPLOAD UP TO 3 PHOTOS</span>MAX SIZE: 150*150px</p>
+                    </div>
+
+                    <div class="alert alert-custom" role="alert">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        ONE FILE IS OVER THE MAXIMUM SIZE
+                    </div>
+
+                    <ul class="chosen_images">
+                        <li style="background-image: url(https://picsum.photos/150/150);">
+                            <button type="button"><i class="fas fa-trash-alt"></i></button>
+                        </li>
+                        <li style="background-image: url(https://picsum.photos/150/150);">
+                            <button type="button"><i class="fas fa-trash-alt"></i></button>
+                        </li>
+                        <li style="background-image: url(https://picsum.photos/150/150);">
+                            <button type="button"><i class="fas fa-trash-alt"></i></button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 4 -->
+                <div  id="step4" class="form-row" style="display: none;">
+                    <div class="form-group col-md-12">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control visa" placeholder="1234 5678 9012 3456"
+                        data-toggle="tooltip" data-placement="right" title="INVALID NUMBER">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Cardholder Name</label>
+                        <input type="text" class="form-control" placeholder="EXAMPLE NAME">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Bank Name</label>
+                        <input type="text" class="form-control" placeholder="EXAMPLE BANK"
+                        data-toggle="tooltip" data-placement="right" title="REQUIRED FILED">
+                    </div>
+                    <div class="form-group col-4">
+                        <label>CVV</label>
+                        <input type="text" class="form-control" placeholder="123">
+                    </div>
+                    <div class="form-group col-8 addafter clear">
+                        <label>Expire Date</label>
+                        <select class="form-control">
+                            <option selected disabled>MM</option>
+                        </select>
+                        <select class="form-control">
+                            <option selected disabled>DD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-lg btn-block mt-5 jsSubmit">SUBMIT & NEXT</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script>
+var step_txt = [
+    ['Create Account', 'Glad to see you here!'],
+    ['General Infomation', 'Tell us who you are!'],
+    ['Update Profile Picture', 'We wanna know you more!'],
+    ['Payment Method', 'Add your credit card infomation!'],
+    ['Congratulations', 'Now you’re one of us! ']
+] 
+
+$(function() {
+    // $('.form-control').tooltip();
+
+    let now_step = 0;
+
+    
+    $('.form-control').change(function(evt){
+        evt.preventDefault();
+        checkInput();
+    });
+
+    function checkInput(){
+
+        let active_input = 0, active_select = 0;
+        let input, select;
+
+        if( now_step == 0 ){
+            input = $("#step1").find("input");
+            select = $("#step1").find("select");
+
+            if( input.eq(0).val().indexOf("@") != -1 ){
+                active_input ++;
+            }else{
+                input.eq(0).tooltip('show');
+            }
+
+            if( input.eq(1).val().length >= 8 ){
+                active_input ++;
+            }else{
+                input.eq(1).tooltip('show');
+            }
+
+            if( input.eq(2).val() != input.eq(1).val() ){
+                active_input ++;
+            }else{
+                input.eq(2).tooltip('show');
+            }
+        }
+
+        // input.each(function(){
+        //     if( $(this).val() != "" ){
+        //         active_input ++;
+        //     }
+        // });
+
+        // select.each(function(){
+        //     if( $(this).val() != "" ){
+        //         active_select ++;
+        //     }
+        // });
+
+        if( active_input == input.length && active_select == select.length ){
+            $(".jsSubmit").attr('disabled', false);
+        }else{
+            $(".jsSubmit").attr('disabled', true);
+        }
+    }
+
+    $('.jsSubmit').click(function(){
+
+        let step = $('.jsForm > div');
+        let line = $('.step_line').find('.active');
+    
+        now_step ++;
+        
+        line.addClass('check');
+        line.next().addClass('active');
+        line.removeClass('active');
+        
+        $('.step_line').find('.active')
+
+        if( now_step == 4 ){
+            $(this).hide();
+        }
+
+        step.hide();
+        step.eq(now_step).show();
+    });
+});
+</script>
+</body>
+</html>
