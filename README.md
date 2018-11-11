@@ -18,10 +18,10 @@
 [04 product gallery](https://atzu012.github.io/04_product_gallery/index.html)
 練習html、css grid
 
-[05_comic_viewer](https://atzu012.github.io/05_comic_viewer/index.html)
+[05 comic viewer](https://atzu012.github.io/05_comic_viewer/index.html)
 練習html、css flex、jQuery
 
-[06_validation](https://atzu012.github.io/06_validation/index.html)
+[06 validation](https://atzu012.github.io/06_validation/index.html)
 練習html、Bootstrap
 
 
