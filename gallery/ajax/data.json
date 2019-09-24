@@ -2,6 +2,36 @@
 
 "web":[
   {
+    "type":"EDM / 2019",
+    "title":"語言理財一起學 生活樂趣更加倍！",
+    "small_img":"images/fortunecity.jpg",
+    "link":"https://tw.hitutoracdm.com/edm/2019/09/FortunecityEvent/"
+  },
+  {
+    "type":"EDM / 2019",
+    "title":"KKday日韓94折｜KKday、Hi家教送你學外語",
+    "small_img":"images/kkday.jpg",
+    "link":"https://tw.hitutoracdm.com/edm/2019/06/KKdayEvent/"
+  },
+  {
+    "type":"EDM / 2019",
+    "title":"兆豐銀行線上結匯｜Hi家教送你學外語",
+    "small_img":"images/megabank.jpg",
+    "link":"https://tw.hitutoracdm.com/edm/2019/06/MegaBank/"
+  },
+  {
+    "type":"EDM / 2019",
+    "title":"外語前進號  海外淘金去｜Hi家教線上外語專家",
+    "small_img":"images/Gold-Washing.jpg",
+    "link":"https://tw.hitutoracdm.com/edm/2019/03/2019-Gold-Washing/"
+  },
+  {
+    "type":"EDM / 2018",
+    "title":"嗨妮 Hi家教形象人物｜Hi家教線上英文、線上外語家教",
+    "small_img":"images/give_name.jpg",
+    "link":"https://tw.hitutoracdm.com/edm/2018/event/give_name/"
+  },
+  {
     "type":"Website / 2017",
     "title":"HiTutorオンライン外国語法人向けサービス",
     "small_img":"images/jp_b2b_0.jpg",
