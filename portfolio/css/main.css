@@ -499,8 +499,8 @@ nav > ol > li {
 }
 nav > ol > li button {
   color: var(--color-primary-dark);
-  border: 1px solid var(--color-primary-dark);
-  border-radius: 100rem;
+  border: none;
+  border-bottom: 1px solid var(--color-primary-dark);
   background-color: transparent;
   padding: 0.5rem 1.5rem;
   position: relative;
@@ -510,7 +510,7 @@ nav > ol > li button {
 }
 nav > ol > li button.active, nav > ol > li button:hover {
   color: white;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light);
 }
 
 footer {
