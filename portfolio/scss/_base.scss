@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;600&display=swap');
+
+:root {
+    --color-primary: #969392;
+    --color-primary-light: #b47d6b;
+    --color-primary-dark: #4c4948;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+    --line: 1px solid var(--color-grey-light-2);
+}
+
+$bp-lagest: 1399px; //1200px
+$bp-large: 1199px; //1100px
+$bp-medium: 991px; //900px
+$bp-small: 767px; //600px
+$bp-smallest: 575px; //500px
+
+$font-size: 15px;
+
+$font-family-1: 'Raleway', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: $font-size;
+    line-height: 1.6;
+    color: var(--color-grey-dark-1);
+
+    &.color {
+        min-height: 100vh;
+        background: linear-gradient(-45deg, var(--color-primary), var(--color-primary-dark));
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
