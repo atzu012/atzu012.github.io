@@ -469,8 +469,13 @@ header, main, footer {
 }
 
 header {
-  padding: 5rem 0 0;
+  padding: 3rem 0 0;
   text-align: center;
+}
+header .logo {
+  width: auto;
+  height: 36px;
+  margin-bottom: 1rem;
 }
 
 main {
@@ -478,7 +483,7 @@ main {
   background-color: rgba(255, 255, 255, 0.85);
   overflow: hidden;
   white-space: nowrap;
-  min-height: calc(100vh - 224px);
+  min-height: calc(100vh - 251px);
 }
 
 footer {
