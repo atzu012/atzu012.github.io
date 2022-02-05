@@ -229,6 +229,7 @@ main {
     background-color: rgba($color: #ffffff, $alpha: .85);
     overflow: hidden;
     white-space: nowrap;
+    min-height: calc(100vh - 224px);
 }
 
 footer {
@@ -273,6 +274,8 @@ nav {
 }
 
 footer {
+    color: white;
+    background-color: var(--color-primary-dark);
     text-align: center;
 }
 
@@ -368,9 +371,12 @@ footer {
     }
 }
 .page-side {
+    color: var(--color-primary-dark);
+    
     &.no-active {
         opacity: 0;
     }
+
     img {
         border-radius: 3px;
         border: 1px solid white;
