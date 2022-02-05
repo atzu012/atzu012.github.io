@@ -145,6 +145,9 @@ body.color {
 .btn-1.larger {
   font-size: 1.2rem;
 }
+.btn-1.full-size {
+  display: block;
+}
 
 .link-1 {
   display: block;
@@ -538,32 +541,19 @@ footer {
 }
 .project-list > a {
   display: block;
-  position: relative;
-  border-radius: 3px;
-  overflow: hidden;
-  border: 1px solid white;
 }
 .project-list > a .img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+.project-list > a .img > img {
   display: block;
   width: 100%;
   max-width: 100%;
 }
-.project-list > a .text {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  color: white;
-  top: 100%;
-  z-index: 5;
-  transition: all 0.2s;
-}
-.project-list > a .tag {
-  position: absolute;
-  z-index: 5;
-  bottom: 4%;
-  left: 4%;
-}
-.project-list > a::after {
+.project-list > a .img::after {
   content: "";
   display: block;
   height: 100%;
@@ -575,10 +565,22 @@ footer {
   background-color: rgba(0, 0, 0, 0);
   transition: all 0.2s;
 }
-.project-list > a:hover::after {
+.project-list > a .img .text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: white;
+  top: 100%;
+  z-index: 5;
+  transition: all 0.2s;
+}
+.project-list > a .tag {
+  margin-top: 0.5rem;
+}
+.project-list > a:hover .img::after {
   background-color: rgba(0, 0, 0, 0.65);
 }
-.project-list > a:hover .text {
+.project-list > a:hover .img .text {
   top: 50%;
   transform: translateY(-50%);
 }

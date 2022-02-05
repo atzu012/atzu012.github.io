@@ -83,8 +83,10 @@ function init() {
         for(let i=0; i < projects.length; i++) {
             const cTxt = category.filter(obj => obj.tit === projects[i].category );
             menuList.innerHTML+=`<a class="mix category-${projects[i].category}" data-order="${i+1}" href="javascript:;">
-                <img class="img" src="img/${projects[i].banner}" alt="${projects[i].title}">
-                <p class="text">${projects[i].title}</p>
+                <div class="img">
+                    <img src="img/${projects[i].banner}" alt="${projects[i].title}">
+                    <p class="text">${projects[i].title}</p>
+                </div>
                 <span class="tag">${cTxt[0].text}</span>
             </a>`;
         }
