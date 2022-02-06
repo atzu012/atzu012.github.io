@@ -386,6 +386,16 @@ footer {
         border-radius: 3px;
         border: 1px solid white;
     }
+
+    article {
+        a {
+            color: var(--color-primary-light);
+    
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
 .tag-group {
     list-style: none;

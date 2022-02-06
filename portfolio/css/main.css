@@ -615,6 +615,12 @@ footer {
   border-radius: 3px;
   border: 1px solid white;
 }
+.page-side article a {
+  color: var(--color-primary-light);
+}
+.page-side article a:hover {
+  text-decoration: none;
+}
 
 .tag-group {
   list-style: none;
