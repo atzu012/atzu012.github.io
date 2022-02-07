@@ -5,5 +5,12 @@
         "title": "HanhSiu",
         "tag": ["Figma", "Bootstraps 5", "HTML", "Javascript", "SCSS"],
         "article": "hanhsiu.html"
+    },
+    {
+        "banner": "project_02_01.jpg",
+        "category": "c",
+        "title": "Countdown",
+        "tag": ["Vue cli"],
+        "article": "countdown.html"
     }
 ]
