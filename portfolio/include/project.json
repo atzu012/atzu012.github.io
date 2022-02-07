@@ -9,8 +9,8 @@
     {
         "banner": "project_02_01.jpg",
         "category": "c",
-        "title": "Countdown",
-        "tag": ["Vue cli"],
+        "title": "vue-countdown",
+        "tag": ["vue cli", "javascript"],
         "article": "countdown.html"
     }
 ]
