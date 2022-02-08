@@ -19,5 +19,12 @@
         "title": "Hitutor HR",
         "tag": ["Photoshop", "Bootstrap3", "HTML", "CSS", "jQuery", "Gulp"],
         "article": "hitutorHR.html"
+    },
+    {
+        "banner": "project_04_01.jpg",
+        "category": "b",
+        "title": "Say Hi to the World",
+        "tag": ["Fireworks", "HTML", "CSS", "jQuery", "Gulp"],
+        "article": "singing.html"
     }
 ]
