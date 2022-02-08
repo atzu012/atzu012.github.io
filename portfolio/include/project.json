@@ -12,5 +12,12 @@
         "title": "vue-countdown",
         "tag": ["vue cli", "javascript"],
         "article": "countdown.html"
+    },
+    {
+        "banner": "project_03_01.jpg",
+        "category": "a",
+        "title": "Hitutor HR",
+        "tag": ["Photoshop", "Bootstrap3", "HTML", "CSS", "jQuery", "Gulp"],
+        "article": "hitutorHR.html"
     }
 ]
