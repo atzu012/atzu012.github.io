@@ -288,7 +288,7 @@ footer {
 .project-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem 1rem;
     padding-bottom: 4rem;
 
     @media only screen and (max-width: $bp-small) {

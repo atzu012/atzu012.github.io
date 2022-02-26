@@ -71,6 +71,14 @@
     }
 }
 
+.link-logo {
+    display: inline-block;
+    transition: all .2s;
+    &:hover {
+        transform: translateY(.5rem);
+    }
+}
+
 /* Loader 1 */
 .loader-1 {
     margin: 0 auto;

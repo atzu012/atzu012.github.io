@@ -29,9 +29,9 @@
     },
     {
         "banner": "project_05_01.jpg",
-        "category": "c",
+        "category": "b",
         "title": "2019 Portfolio",
-        "tag": ["Bootstrap3", "HTML", "CSS", "jQuery", "ajax"],
+        "tag": ["Bootstrap3", "HTML", "CSS", "jQuery", "ajax", "Gulp"],
         "article": "2019Portfolio.html"
     }
 ]
