@@ -38,10 +38,10 @@
     "link":"http://jptest.hitutor.org/enterprise/index.php"
   },
   {
-    "type":"Website / 2016",
-    "title":"HiTutor HR",
-    "small_img":"images/hitutorhr_0.jpg",
-    "link":"https://atzu012.github.io/HR/"
+      "type":"EDM / 2015",
+      "title":"多益作戰聯盟",
+      "small_img":"images/newtoeic.jpg",
+      "link":"javascript:;"
   },
   {
     "type":"EDM / 2015",
@@ -51,9 +51,27 @@
   },
   {
     "type":"EDM / 2015",
+    "title":"11改變",
+    "small_img":"images/change11.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2015",
     "title":"嚴師高徒",
     "small_img":"images/onlythebest.jpg",
     "link":"https://tw.hitutoracdm.com/edm/2017/onlythebest/"
+  },
+  {
+    "type":"EDM / 2015",
+    "title":"1分鐘檢測你的英文夠道地嗎?",
+    "small_img":"images/nativespeaker.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2015",
+    "title":"6週年慶，突破",
+    "small_img":"images/6years_0.jpg",
+    "link":"javascript:;"
   },
   {
     "type":"EDM / 2015",
@@ -62,10 +80,52 @@
     "link":"https://tw.hitutoracdm.com/edm/2017/goto-south-asia/"
   },
   {
+    "type":"EDM / 2015",
+    "title":"英語面試養成攻略",
+    "small_img":"images/english_interview.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2016",
+    "title":"2016火猴獻寶",
+    "small_img":"images/2016_firegift.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2016",
+    "title":"30天成功轉職必修班",
+    "small_img":"images/sucessfully_transfer_v2.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2016",
+    "title":"梅雨季正是美語季",
+    "small_img":"images/raining_day.jpg",
+    "link":"javascript:;"
+  },
+  {
     "type":"EDM / 2016",
     "title":"JLPT直達N1一步到位",
     "small_img":"images/jlpt.jpg",
     "link":"https://tw.hitutoracdm.com/edm/2017/jlpt/"
+  },
+  {
+    "type":"EDM / 2016",
+    "title":"英文520宣誓典禮",
+    "small_img":"images/english520.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2016",
+    "title":"誰是兒童美語積木王",
+    "small_img":"images/building_blocks.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2016",
+    "title":"30天戰勝職場必修班",
+    "small_img":"images/beat_workplace.jpg",
+    "link":"javascript:;"
   },
   {
     "type":"EDM / 2016",
@@ -78,6 +138,24 @@
     "title":"春日培訓季",
     "small_img":"images/spring.jpg",
     "link":"http://business.hitutor.com.tw/edm/spring/"
+  },
+  {
+    "type":"EDM / 2015",
+    "title":"註冊試讀雙重送",
+    "small_img":"images/doublegifts.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2015",
+    "title":"11月限定",
+    "small_img":"images/limit11_systemlearning.jpg",
+    "link":"javascript:;"
+  },
+  {
+    "type":"EDM / 2015",
+    "title":"30天變身英語通",
+    "small_img":"images/30days_transfiguration.jpg",
+    "link":"javascript:;"
   }
 ],
 "banner":[
@@ -90,7 +168,44 @@
   { "img":"images/banner/b_007.gif" },
   { "img":"images/banner/b_008.gif" },
   { "img":"images/banner/b_009.gif" },
-  { "img":"images/banner/b_010.gif" }
+  { "img":"images/banner/b_010.gif" },
+  { "img":"images/banner/b_011.gif" },
+  { "img":"images/banner/b_012.gif" },
+  { "img":"images/banner/b_013.gif" },
+  { "img":"images/banner/b_014.gif" },
+  { "img":"images/banner/b_015.gif" },
+  { "img":"images/banner/b_016.gif" },
+  { "img":"images/banner/b_017.gif" },
+  { "img":"images/banner/b_018.gif" },
+  { "img":"images/banner/b_019.gif" },
+  { "img":"images/banner/b_020.jpg" },
+  { "img":"images/banner/b_021.gif" },
+  { "img":"images/banner/b_022.jpg" },
+  { "img":"images/banner/b_023.gif" },
+  { "img":"images/banner/b_024.gif" },
+  { "img":"images/banner/b_025.jpg" },
+  { "img":"images/banner/b_026.gif" },
+  { "img":"images/banner/b_027.jpg" },
+  { "img":"images/banner/b_028.gif" },
+  { "img":"images/banner/b_029.gif" },
+  { "img":"images/banner/b_030.gif" },
+  { "img":"images/banner/b_031.gif" },
+  { "img":"images/banner/b_032.gif" },
+  { "img":"images/banner/b_033.gif" },
+  { "img":"images/banner/b_034.gif" },
+  { "img":"images/banner/b_035.gif" },
+  { "img":"images/banner/b_036.gif" },
+  { "img":"images/banner/b_037.gif" },
+  { "img":"images/banner/b_038.gif" },
+  { "img":"images/banner/b_039.gif" },
+  { "img":"images/banner/b_040.gif" },
+  { "img":"images/banner/b_041.gif" },
+  { "img":"images/banner/b_042.gif" },
+  { "img":"images/banner/b_043.gif" },
+  { "img":"images/banner/b_044.gif" },
+  { "img":"images/banner/b_045.gif" },
+  { "img":"images/banner/b_046.gif" },
+  { "img":"images/banner/b_047.gif" }
 ]
 
 }
