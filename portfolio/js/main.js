@@ -25,6 +25,7 @@ const category = [
 ]
 
 let projects = [];
+let bodyTop = 0;
 
 function setArticle(num) {
     const obj =  projects[num];
@@ -44,12 +45,19 @@ function setArticle(num) {
 
     w3.includeHTML();
 
+    bodyTop = window.pageYOffset;
+
+    console.log(bodyTop);
+
+    window.scrollTo(0, 0);
 }
 
 function closeArticle(){
     menuSide.classList.remove('no-active');
     pageSide.classList.add('no-active');
     articleMain.innerHTML = '';
+
+    window.scrollTo(0,bodyTop);
 }
 
 function init() {

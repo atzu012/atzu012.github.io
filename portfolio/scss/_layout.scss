@@ -287,16 +287,16 @@ footer {
 
 .project-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem 1rem;
     padding-bottom: 4rem;
 
     @media only screen and (max-width: $bp-small) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     > a {
@@ -415,6 +415,10 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-direction: column;
+    }
 
     > * {
         flex: 1;
