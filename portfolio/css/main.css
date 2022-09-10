@@ -647,4 +647,74 @@ footer {
 .center-box {
   display: grid;
   place-content: center;
+}
+
+@media print {
+  @page {
+    margin: 0.5cm;
+    size: A4 portrait;
+  }
+  body {
+    font-size: 56.25%;
+    -webkit-print-color-adjust: exact;
+  }
+  .profile {
+    grid-template-columns: 190px auto;
+    min-height: 100vh;
+  }
+  .profile__left {
+    padding: 0 15px;
+  }
+  .profile__left--top {
+    padding: 15px 10px 5px 10px;
+  }
+  .profile__left--top img {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+  }
+  .profile__left--top > p {
+    margin-bottom: 10px;
+  }
+  .profile__right {
+    padding: 15px;
+  }
+  .time-line__period {
+    min-width: 100px;
+    flex-basis: 100px;
+    padding: 10px 20px 10px 0;
+  }
+  .time-line__period::before {
+    top: 16px;
+  }
+  .time-line__period::after {
+    top: 14px;
+  }
+  .time-line__txt {
+    padding: 10px 0 10px 10px;
+  }
+  .mb-2 {
+    margin-bottom: 1rem;
+  }
+  .heading__2.mb-1 {
+    margin-bottom: 10px;
+  }
+  .icon-box__icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+  .skill-box__level {
+    gap: 3px;
+  }
+  .skill-box__level > i {
+    width: 3px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .no-print {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
