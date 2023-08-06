@@ -1,0 +1,50 @@
+[
+    {
+        "banner": "project_07_01.jpg",
+        "category": "a",
+        "title": "上海商銀紅利兌換平台",
+        "tag": ["Figma", "UI Flow", "Bootstraps 5", "Vue3", "HTML", "Javascript", "SCSS"],
+        "article": "https://vip.canlead.com.tw/scsb/reward/index.aspx",
+        "text": "設計與製作首頁分類Vue3 Component"
+    },
+    {
+        "banner": "project_06_01.jpg",
+        "category": "a",
+        "title": "VISA 永續旅遊",
+        "tag": ["Figma", "UI Flow", "Bootstraps 5", "Vue3", "HTML", "Javascript", "SCSS"],
+        "article": "https://vip.canlead.com.tw/VISA/ESG/",
+        "text": "網頁視覺設計與前端程式"
+    },
+    {
+        "banner": "project_01_01.jpg",
+        "category": "a",
+        "title": "漢修學苑",
+        "tag": ["Figma", "UI Flow", "Bootstraps 5", "HTML", "Javascript", "SCSS"],
+        "article": "https://hanhsiu.org/hanhsiu/index.php",
+        "text": "網頁視覺設計與切版"
+    },
+    {
+        "banner": "project_02_01.jpg",
+        "category": "c",
+        "title": "Vue 倒數計時器",
+        "tag": ["vue cli", "javascript"],
+        "article": "https://atzu012.github.io/vue-countdown/?date=20231231",
+        "text": "用帶參數的方式更新目標日期"
+    },
+    {
+        "banner": "project_05_01.jpg",
+        "category": "b",
+        "title": "2019 Portfolio",
+        "tag": ["Bootstrap3", "UI Flow", "HTML", "CSS", "jQuery", "ajax", "Gulp"],
+        "article": "https://atzu012.github.io/gallery/#tit_web",
+        "text": "活動網頁與Banner設計"
+    },
+    {
+        "banner": "project_03_01.jpg",
+        "category": "a",
+        "title": "Hitutor 師資招募專站",
+        "tag": ["Photoshop", "UI Flow", "Bootstrap3", "HTML", "CSS", "jQuery", "Gulp"],
+        "article": "https://hr.hi-tr.com/",
+        "text": "網頁視覺設計與切版"
+    }
+]
