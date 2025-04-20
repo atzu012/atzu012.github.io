@@ -1,5 +1,13 @@
 [
     {
+        "banner": "project_08_01.jpg",
+        "category": "a",
+        "title": "新竹市管線系統",
+        "tag": ["Vue3", "Nuxt3", "Arcgis js Core", "Element-plus", "Tailwindcss"],
+        "article": "https://pipe.hccg.gov.tw/hcpipe_digcase/",
+        "text": "UIUX設計、系統分析與前端程式"
+    },
+    {
         "banner": "project_07_01.jpg",
         "category": "a",
         "title": "上海商銀紅利兌換平台",
